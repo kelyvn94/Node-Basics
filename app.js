@@ -10,6 +10,7 @@ app.listen(3001);
 app.get('/', (req, res) => {
     res.render('home');
 })
+app.use(express.static ("Public"));
 app.get('/about', (req, res) => {
     res.render('about');
 })

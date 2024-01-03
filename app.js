@@ -17,7 +17,7 @@ app.get('/about', (req, res) => {
 app.get('/about-us', (req, res) => {
     res.redirect('/about');
 })
-app.get('/conact', (req, res) => {
+app.get('/contact', (req, res) => {
     res.redirect('/about');
 })
 

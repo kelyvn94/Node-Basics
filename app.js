@@ -20,6 +20,10 @@ app.get('/about-us', (req, res) => {
 app.get('/contact', (req, res) => {
     res.redirect('/about');
 })
+app.get('/Portforlio', (req, res) => {
+    res.redirect('/about');
+})
+
 
 app.use((req, res) => {
     res.status(404).render('404');

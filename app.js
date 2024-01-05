@@ -20,6 +20,9 @@ app.get('/about-us', (req, res) => {
 app.get('/contact', (req, res) => {
     res.redirect('/about');
 })
+app.get('/contant-us', (req, res) => {
+    res.redirect('/about');
+})
 app.get('/Portforlio', (req, res) => {
     res.redirect('/about');
 })

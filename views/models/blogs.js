@@ -16,6 +16,14 @@ const blogSchema = new Schema ({
     }
 }, {timestamps: true});
 
+model User {
+    id Int @id @default(autoincrement())  
+    firstName String
+    lastName String
+    age Int
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
 const Blog = mongoose.model('Blog', blogSchema);
 
 module.exports = Blog;

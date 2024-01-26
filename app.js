@@ -20,19 +20,19 @@ app.get('/', async(req, res) => {
     res.send(user)
 })
 app.use(express.static ("Public"));
-app.get('views/about', (req, res) => {
+app.get('/about', (req, res) => {
     res.render('about');
 })
-app.get('views/about-us', (req, res) => {
+app.get('/about-us', (req, res) => {
     res.redirect('public/about');
 })
-app.get('views/contact', (req, res) => {
+app.get('/contact', (req, res) => {
     res.redirect('public/about');
 })
-app.get('views/contant-us', (req, res) => {
+app.get('/contant-us', (req, res) => {
     res.redirect('public/about');
 })
-app.get('views/Portfolio', (req, res) => {
+app.get('/Portfolio', (req, res) => {
     res.redirect('public/about');
 })
 

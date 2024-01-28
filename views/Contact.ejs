@@ -8,5 +8,19 @@
     <p>This is the contact page content</p>
     <%= name%>
     <p>@gmail: kmacharia584@gmail.com</p>
+
+     <%if(users.length>0){%>
+            <%users.forEach(post=>{%>
+                <div >
+                    <h2><%-post.name%> </h2>
+                
+                   <p><%-post.email%></p>
+                    
+                </div>
+            <%})%>
+            
+        <%}else{%>
+            <p>No users</p>
+        <%}%>
 </body>
 </html>

@@ -1,23 +1,50 @@
 const express = require('express');
-const mongoose = require('mongoose');
-const blog = require('./views/models/blogs');
-const prisma = require('./views/db');
+const router = express.Router();
+const { PrismaClient } = require('@prisma/client');
+const bodyParser = require('body-parser');
 
-const router=require('./routes/route')
+const prisma = new PrismaClient();
+
+
+const Router=require('./routes/route')
 
 const app = express();
-
-app.listen(5000,()=>{
-console.log('listening')
-})
 
 //create a view engine
 app.set('view engine', 'ejs');
 
+app.listen(5000,()=>{
+ 
+console.log('listening')
+})
+
+app.use(express.json());
+
+
+async function main() {
+  // ... you will write your Prisma Client queries here
+  // Creates a new user record in the database with the provided name and email
+  const newUser = await prisma.user.create({
+    data: { name: "Kelvin", email: "kmacharia584@gmail.com" },
+  });
+  console.log(newUser);
+}
+
+main()
+  .then(async () => {
+    await prisma.$disconnect()
+  })
+  .catch(async (e) => {
+    console.error(e)
+    await prisma.$disconnect()
+    process.exit(1)
+  })
+
+
 
 app.use(express.static ("Public"));
 
-app.use(router)
+app.use(Router)
 // app.get('/about', (req, res) => {
 //     res.render('about');
 // })

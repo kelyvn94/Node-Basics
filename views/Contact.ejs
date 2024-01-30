@@ -2,16 +2,11 @@
 <html lang="en">
 <%- include('./parttials/head.ejs') %>
 <body>
-
+ 
+    <%- include('./Parttials/nav.ejs') %>
     <% const name= 'Macharia'  %>
     <h1 class="text-center" > <FontAwesomeIcon icon="fa-solid fa-address-card" />This is the contact page</h1>
-    <button type="button"  class="btn btn-primary position-relative d-flex flex-row-reverse bd-highlight">
-        Inbox
-        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-          5+
-          <span class="visually-hidden">unread messages</span>
-        </span>
-      </button>
+    
 
      <%if(users.length>0){%>
             <%users.forEach(post=>{%>
@@ -26,48 +21,6 @@
         <%}else{%>
             <p>No users</p>
         <%}%>
-        <div class="container d-inline-flex">
-            <!-- Content here -->
-        <div class="card mx-auto" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
+        
 </body>
 </html>

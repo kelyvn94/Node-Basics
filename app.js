@@ -40,8 +40,6 @@ main()
     process.exit(1)
   })
 
-
-
 app.use(express.static ("Public"));
 
 app.use(Router)

@@ -14,20 +14,19 @@ const app = express();
 app.set('view engine', 'ejs');
 
 app.listen(5000,()=>{
- 
-console.log('listening')
+ console.log('Starting the server')
 })
 
 app.use(express.json());
 
 
 async function main() {
-  // ... you will write your Prisma Client queries here
+
   // Creates a new user record in the database with the provided name and email
-  const newUser = await prisma.user.create({
-    data: { name: "Kelvin", email: "kmacharia584@gmail.com" },
-  });
-  console.log(newUser);
+  // const newUser = await prisma.user.create({
+  //   data: { name: "Kelvin", email: "kmacharia584@gmail.com" },
+  // });
+  // console.log(newUser);
 }
 
 main()

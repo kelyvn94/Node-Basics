@@ -2,24 +2,16 @@
 <html lang="en">
 <%- include('./parttials/head.ejs') %>
 <body>
- 
-    <%- include('./Parttials/nav.ejs') %>
-    <% const name= 'Macharia'  %>
-    <h1 class="text-center" > <FontAwesomeIcon icon="fa-solid fa-address-card" />This is the contact page</h1>
-    
+ <%- include('./Parttials/nav.ejs') %>
+ <h1 class="text-center" > <FontAwesomeIcon icon="fa-solid fa-address-card" />This is the contact page</h1>
 
-     <%if(users.length>0){%>
-            <%users.forEach(post=>{%>
-                <div >
-                    <h2><%-post.name%> </h2>
-                
-                   <p><%-post.email%></p>
-                </div>
-            <%})%>
-            
-        <%}else{%>
-            <p>No users</p>
-        <%}%>
-        
+ <div class="row g-3">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Name" aria-label="First name">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Email" aria-label="Last name">
+    </div>
+  </div>
 </body>
 </html>

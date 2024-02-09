@@ -4,6 +4,15 @@
 <body>
     <%- include('./Parttials/nav.ejs') %>
     <h1 class="text-center" > <FontAwesomeIcon icon="fa-solid fa-address-card">This is the Blog page</h1>
+      <div class="row g-3">
+        <div class="col">
+          <% const name= 'Macharia'  %>
+          <input type="text" class="form-control" placeholder="Name" aria-label="First name">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Email" aria-label="Last name">
+        </div>
+      </div>
     <p>This is the Blog page content</p>
     <h1>This is the Blog page</h1>
     <% const name= 'Macharia'  %>
